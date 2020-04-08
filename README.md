@@ -12,7 +12,6 @@
 | PUT    | [host]/book/update/{id} | Update Book by Id       |
 | DELETE | [host]/book/delete/{id} | Delete Book by Id       |
 
-# Setup For Installation
 
 ### Features
 
