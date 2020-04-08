@@ -88,14 +88,13 @@ class Book extends Controller
     {
         $book  = $model->find($id);
         
-        $updateBook = $book->update($request->all());
-        
         if (!$book) {
             return response()->json([
                 "success" => false,
                 "message" => "Book with id ". $id ." not found",
             ], 404);
         }
+        $updateBook = $book->update($request->all());
 
         if($updateBook){
             $success = true;
@@ -106,6 +105,7 @@ class Book extends Controller
             $message = "Fail, book not updated";
             $status = 404;
         }
+
         return response()->json([
             "success" => $success,
             "message" => $message,
