@@ -44,7 +44,7 @@ class Book extends Controller
         if($findBook){
             $success = true;
             $message = "Success, Book with id ". $id;
-            $book = $model->find($id);  
+            $book = $findBook;
         }else{
             $success = false;
             $message = "Book with id ". $id ." not found";
